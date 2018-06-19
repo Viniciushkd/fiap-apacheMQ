@@ -20,6 +20,7 @@ public class ReadQueue {
 			@Override
 			public void configure() throws Exception {
 				from("jms:fiap31scj").to("stream:out").to("file:/home/ibm/Exercicios/outputFolder/");
+				//from("jms:fiap31scj").to("stream:out").to("jms:outraqueue"); // Para outra Queue
 			}
 		});
 		
